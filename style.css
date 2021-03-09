@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root{
+    --primary-color: #1C1C24;
+    --secondary-color: #292932;
+    --terceary-color: #F2C94C;
+    --fourth-color: #B5B5BE;
+    --text-color: #fff;
+    --heading-primary: 30px;
+    --heading-secondary: 25px;
+    --text-primary: 14px;
+    --text-secondary: 11px;
+}
+
+body {
+    background-color: #292932;
+    font-family: 'Poppins', sans-serif;  
+}
+
+.main {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-historial, .cal {
+    
+    box-sizing: border-box;
+}
+
+@media (max-width: 680px) {
+
+    .main {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    .card-historial {
+    margin-top: .7rem;
+    }
+  }
+
+  @media (min-width: 681px) {
+
+    .card-historial {
+        background: #1C1C24;
+        border-radius: 20px;
+        padding: 25px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 300px;
+        margin-left: 1.4rem;
+    }
+
+  }
+
+.card-historial {
+    background: #1C1C24;
+    border-radius: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+}
+
+.line {
+    width: 300px;
+    background: var(--secondary-color);
+    height: 1px;
+    margin-top: .8rem; 
+    z-index: 1;
+}
+
+h5 {
+    font-size: var(--heading-secondary);
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+    font-size: 14px;
+    align-self: flex-start;
+    
+}
+
+.squares{
+    margin-top: 8px; 
+    display: flex;
+    flex-flow: wrap;    
+}
+
+.square-thisweek{
+    color: var(--terceary-color);
+}
+
+.logo-ochoagram {
+    width: 10rem;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
