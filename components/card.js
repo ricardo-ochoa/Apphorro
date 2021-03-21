@@ -1,3 +1,30 @@
+
+
+function saving() {
+    document.querySelector('savings-card').setAttribute('total', '3400');
+    
+} 
+
+let numbers = [30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360, 390, 410, 440, 470, 500, 530, 560, 590, 620, 650, 680, 710, 240, 770];
+//let thisWeek = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26];
+var thisWeek = 0
+
+function ramdomNumber () {
+    const random = Math.floor(Math.random() * numbers.length);
+    document.querySelector('savings-card').setAttribute('saving',numbers[random]);
+}
+
+function thisweek () {
+    document.querySelector('savings-card').setAttribute('thisweek', ++thisWeek);
+}
+
+
+
+ramdomNumber()
+thisweek()
+saving()
+
+
 class savingsCard extends HTMLElement {
     constructor() {
         super();
@@ -138,4 +165,4 @@ class savingsCard extends HTMLElement {
         this.render();
     }
 }
-customElements.define("savings-card", savingsCard);
+customElements.define("savings-card", savingsCard); 
