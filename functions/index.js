@@ -3,19 +3,20 @@ const admin = require('firebase-admin')
 const express = require('express')
 
 const app = express()
+
 admin.initializeApp({
     credential: admin.credential.cert('./permissions.json'),
     databaseURL:"https://apphorro-e0b7e-default-rtdb.firebaseio.com"
 })
 
-const db = admin.firestore()
-
-app.post('/api/saving',  async (req, res) => {
-  await db.collection('savings')
-    .doc("/"+ req.body.id + "/")
-    .create({ saving: req.body.saving });
-    return res.status(204).json();
+app.get("/hello-world", (req, res) => {
+  return res.status(200).jsoin({ message: "Hello world :)"});
 });
+
+
+
+app.use(require('./routes/weeks-routes'))
+app.use(require('./routes/savings-routes'))
 
 exports.app = functions.https.onRequest(app);
 
